@@ -40,6 +40,10 @@ ul {
   padding: 0 15px;
   max-width: 1200px;
 }
+.container-fluid {
+  max-width: 100%;
+  margin: 0 auto;
+}
 
 .is-hidden {
   display: none !important;
