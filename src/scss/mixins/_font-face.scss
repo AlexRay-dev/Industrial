@@ -1,10 +1,28 @@
-@mixin font-face($font-family, $url, $weight, $style) {
-  @font-face {
-    font-family: "#{$font-family}";
-    src: url('../fonts/#{$url}.woff2') format("woff2");
-    font-weight: #{$weight};
-    font-display: swap;
-    font-style: $style;
-  }
+@font-face{
+  font-family: 'TT Norms';
+  src: url(../../resources/fonts/ttnorms-regular-webfont.woff2), url(../../resources/fonts/ttnorms-regular-webfont.woff);
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
 }
-
+@font-face {
+  font-family: 'TT Norms';
+  src: url(../../resources/fonts/ttnorms-medium-webfont.woff2), url(../../resources/fonts/ttnorms-medium-webfont.woff);
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Norms';
+  src: url(../../resources/fonts/ttnorms-bold-webfont.woff2), url(../../resources/fonts/ttnorms-bold-webfont.woff);
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Norms';
+  src: url(../../resources/fonts/ttnorms-extrabold-webfont.woff2), url(../../resources/fonts/ttnorms-extrabold-webfont.woff);
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
