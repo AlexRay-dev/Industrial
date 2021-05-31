@@ -87,6 +87,25 @@ h2 {
   font-weight: 700;
   color: $black;
 }
+h5 {
+   font-size: 1.8rem;
+   font-weight: 500;
+   line-height: 1.5;
+}
+section {
+   margin-top: 12rem;
+}
+.section__header {
+   display: flex;
+   align-items: center;
+   margin-bottom: 5rem;
+
+   &-num {
+      margin: 0 2.5rem;
+      color: $blue;
+      font-weight: 700;
+   }
+}
 
 
 /* Logo */
