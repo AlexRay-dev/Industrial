@@ -11,6 +11,8 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -21,6 +23,8 @@ body {
   color: $black-light;
 
   background-color: $white;
+
+  position: relative;
 }
 
 img {
@@ -71,6 +75,20 @@ ul {
   cursor: pointer;
 }
 
+h1 {
+  font-size: 5.4rem;
+  line-height: 1.5;
+  font-weight: 800;
+  color: $white;
+}
+h2 {
+  font-size: 4.6rem;
+  line-height: 1.5;
+  font-weight: 700;
+  color: $black;
+}
+
+
 /* Logo */
 .logo {
 }
@@ -78,9 +96,6 @@ ul {
   max-width: 9rem;
 }
 /* Menu */
-.menu {
-  background-color: $gray;
-}
 .menu-list {
   display: flex;
   margin: 0;
