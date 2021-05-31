@@ -3,3 +3,27 @@
 @import '_mixins';
 @import '_fonts';
 
+
+/* Header */
+.header {
+
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0;
+}
+.header__contacts {
+  display: flex;
+  flex-direction: column;
+  &-tel {
+    color: $black;
+    font-weight: 500;
+  }
+  &-mail {
+    margin-top: 1rem;
+
+    color: $gray-light;
+  }
+}
