@@ -249,3 +249,36 @@
       color: $white;
    }
 }
+
+
+.map__item {
+   position: relative;
+   cursor: pointer;
+   &:hover {
+      .area,
+      .marker_2 {
+         fill: $blue;
+      }
+      .marker_1 {
+         fill: white;
+      }
+      .map-item-tab {
+         display: block;
+      }
+   }
+}
+
+.map__tabs-item {
+   display: none;
+   background-color: #fff;
+   box-shadow: 0px 10px 50px rgba(44, 59, 99, 0.15);
+   padding: 1rem;
+   width: 42rem;
+   z-index: 100000;
+   position: absolute;
+
+   &--active {
+      display: block;
+   }
+
+}
