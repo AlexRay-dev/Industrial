@@ -314,7 +314,6 @@
       display: flex;
       align-items: flex-end;
 
-
       position: absolute;
       bottom: 0;
       left: 0;
@@ -329,7 +328,7 @@
    }
    &-title {
       margin-bottom: 2rem;
-      transition: all .1s linear;
+      transition: all 0.1s linear;
    }
    &-text {
       color: $black-light;
@@ -342,5 +341,103 @@
       font-weight: 700;
 
       background-color: $blue;
+   }
+}
+
+/* slider-fluid */
+.slider-fluid {
+   margin-bottom: 12rem;
+   &__container {
+      position: relative;
+   }
+}
+.slider-fluid__slide {
+   padding: 7rem 0;
+
+   background: url(../img/intro-bg.jpg) no-repeat center / cover;
+   &--about {
+      background: url(../img/slider-fluid.jpg) no-repeat center / cover;
+   }
+   &-box {
+      max-width: 80rem;
+      padding: 5rem;
+      background-color: #fafafa;
+      .section__header {
+         margin-bottom: 3rem;
+      }
+   }
+   &-content {
+   }
+   &-text {
+      font-size: 1.8rem;
+      line-height: 1.8;
+      &:not(:first-child) {
+         margin-top: 2rem;
+      }
+   }
+   &-link {
+      display: flex;
+      align-items: center;
+      margin-top: 2.5rem;
+
+      font-size: 1.5rem;
+      color: $black;
+      font-weight: 500;
+   }
+   &-icon {
+      margin-left: 2rem;
+      width: 0.8rem;
+      height: 0.8rem;
+      transform: rotate(90deg);
+
+      fill: $black;
+   }
+}
+.slider__buttons {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   z-index: 100;
+   width: 100%;
+
+   &-wrapper {
+      display: flex;
+      justify-content: flex-end;
+   }
+}
+.slider__btn {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 7rem;
+   height: 4rem;
+
+   background-color: $blue-light;
+   cursor: pointer;
+
+   transition: all 0.1s linear;
+
+   &:hover {
+      background-color: $blue;
+   }
+   &-icon {
+      width: 1.2rem;
+      height: 1.2rem;
+
+      fill: $white;
+   }
+   &--next {
+      transform: rotate(180deg);
+   }
+}
+.swiper-button-disabled {
+   background-color: $white;
+   border: 1px solid #dbdbdb;
+   &:hover {
+      background-color: $white;
+      border-color: #dbdbdb;
+   }
+   .slider__btn-icon {
+      fill: #dbdbdb;
    }
 }
