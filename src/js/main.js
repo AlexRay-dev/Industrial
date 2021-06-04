@@ -3,6 +3,46 @@ new Swiper('.slider-fluid__container', {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+   keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+   },
+   autoHeight: true,
+});
+new Swiper('.partners-slider__container', {
+   navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+   },
+   centeredSlides: true,
+   slidesPerView: 2.5,
+   spaceBetween: 10,
+   loop: true,
+   scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+   },
+
+   breakpoints: {
+      320: {
+         centeredSlides: false,
+         loop: false,
+      },
+      768: {
+         slidesPerView: 4.5,
+      },
+      991: {
+         slidesPerView: 5.5,
+      },
+      1300: {
+         slidesPerView: 7.5,
+      }
+   }
+
 });
 
 

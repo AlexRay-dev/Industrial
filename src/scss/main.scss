@@ -250,6 +250,26 @@
    }
 }
 
+/* partners-slider */
+.partners-slider {
+   &__container {
+      position: relative;
+   }
+   &__wrapper {
+   }
+   &__slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 22rem;
+      height: 12rem;
+
+      background-color: #fafafa;
+      &-img {
+      }
+   }
+}
+/* Map */
 .map__item {
    position: relative;
    cursor: pointer;
@@ -404,6 +424,9 @@
       display: flex;
       justify-content: flex-end;
    }
+   &--partners {
+      top: 0;
+   }
 }
 .slider__btn {
    display: flex;
@@ -440,4 +463,15 @@
    .slider__btn-icon {
       fill: #dbdbdb;
    }
+}
+.swiper-scrollbar {
+   margin-top: 1rem;
+   background-color: #EAEAEA;
+   height: 2px;
+}
+
+.swiper-scrollbar-drag {
+   background-color: $blue;
+   cursor: pointer;
+   height: 2px;
 }
