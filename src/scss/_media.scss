@@ -1,0 +1,23 @@
+/* desktop (1400px) */
+@include desktop {
+   .header__contacts {
+      &-mail {
+         display: none;
+      }
+   }
+}
+
+
+/* tablet (1024px) */
+@include tablet {
+   .intro {
+      margin-top: 500px;
+   }
+}
+
+
+/* mobile (768px) */
+@include mobile {
+
+}
+

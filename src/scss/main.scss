@@ -41,6 +41,7 @@
 
 /* Intro */
 .intro {
+   margin-top: 0;
    height: 100vh;
    position: relative;
    &-container {
@@ -474,3 +475,6 @@
    cursor: pointer;
    height: 2px;
 }
+
+
+@import "_media";

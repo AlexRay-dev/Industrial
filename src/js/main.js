@@ -1,8 +1,36 @@
+"use strict"
+
+/* Прокрутка при клике */
+
+const menuLinks = document.querySelectorAll(".intro__menu-link[data-goto]");
+
+if (menuLinks.length > 0) {
+   menuLinks.forEach(menuLink => {
+      menuLink.addEventListener('click', onMenuLinkClick);
+   });
+
+   function onMenuLinkClick (e) {
+      const menuLink = e.target;
+      if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+         const gotoBlock = document.querySelector(menuLink.dataset.goto);
+         const gotoBlockValue = gotoBlock.getBoundingClientRect().top;
+
+         window.scrollTo({
+            top: gotoBlockValue,
+            behavior: "smooth"
+         });
+         e.preventDefault();
+      };
+   };
+};
+
+
+
 new Swiper('.slider-fluid__container', {
    navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    },
+   },
    keyboard: {
       enabled: true,
       onlyInViewport: true,
@@ -13,8 +41,8 @@ new Swiper('.partners-slider__container', {
    navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    },
-    keyboard: {
+   },
+   keyboard: {
       enabled: true,
       onlyInViewport: true,
    },
@@ -54,25 +82,26 @@ const tabsExampleItem = document.querySelectorAll(".map__tabs-item");
 tabsExampleBtn.forEach(onTabBtnClick)
 
 function onTabBtnClick(item) {
-    item.addEventListener('mouseover', function () {
-        let currentBtn = item;
-        let tabId = currentBtn.getAttribute("data-tab");
-        let currentTab = document.querySelector(tabId)
+   item.addEventListener('mouseover', function () {
+      let currentBtn = item;
+      let tabId = currentBtn.getAttribute("data-tab");
+      let currentTab = document.querySelector(tabId)
 
 
-            currentBtn.classList.add("map__item--active");
-            currentTab.classList.add("map__tabs-item--active")
-    });
-    item.addEventListener('mouseout', function () {
-        let currentBtn = item;
-        let tabId = currentBtn.getAttribute("data-tab");
-        let currentTab = document.querySelector(tabId)
+      currentBtn.classList.add("map__item--active");
+      currentTab.classList.add("map__tabs-item--active")
+   });
+   item.addEventListener('mouseout', function () {
+      let currentBtn = item;
+      let tabId = currentBtn.getAttribute("data-tab");
+      let currentTab = document.querySelector(tabId)
 
 
-            currentBtn.classList.remove("map__item--active");
-            currentTab.classList.remove("map__tabs-item--active")
-    });
+      currentBtn.classList.remove("map__item--active");
+      currentTab.classList.remove("map__tabs-item--active")
+   });
 };
 /* Example-tabs */
+
 
 
