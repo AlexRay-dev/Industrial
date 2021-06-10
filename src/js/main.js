@@ -26,6 +26,61 @@ if (menuLinks.length > 0) {
 
 
 
+/* Burger */
+const menuBtn = document.querySelector('.burger');
+const menuMobile = document.querySelector('.menu__body');
+let menuOpen = false;
+
+menuBtn.addEventListener('click', function () {
+    if (!menuOpen) {
+        menuBtn.classList.add('burger--open');
+        menuMobile.classList.add('menu__body--open');
+        menuOpen = true;
+    } else {
+        menuBtn.classList.remove('burger--open');
+        menuMobile.classList.remove('menu__body--open');
+        menuOpen = false;
+    }
+})
+/* Burger */
+
+
+
+
+/* Intro-slider */
+new Swiper('.intro__items', {
+   navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+   },
+   keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+   },
+   slidesPerView: 4,
+   allowTouchMove: false,
+
+   breakpoints: {
+      // when window width is >= 320px
+      // 320: {
+      //   slidesPerView: 2,
+      //   spaceBetween: 20
+      // },
+      // // when window width is >= 480px
+      480: {
+        slidesPerView: 2.3,
+        allowTouchMove: true,
+        centeredSlidesBounds: true,
+
+      },
+      // when window width is >= 640px
+      1400: {
+        slidesPerView: 4,
+        centeredSlides: false,
+      }
+    }
+});
+
 new Swiper('.slider-fluid__container', {
    navigation: {
       nextEl: '.swiper-button-next',

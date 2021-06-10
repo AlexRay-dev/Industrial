@@ -14,6 +14,63 @@ html {
    margin: 0;
    padding: 0;
 }
+// ul[class],
+// ol[class] {
+//    padding: 0;
+// }
+
+// html{
+//    box-sizing: border-box;
+//  }
+
+//  *,
+//  *::after,
+//  *::before{
+//    box-sizing: inherit;
+//  }
+
+//  ul[class],
+//  ol[class] {
+//    padding: 0;
+//  }
+//  ul[class] {
+//    list-style: none;
+//  }
+
+//  body,
+//  h1,
+//  h2,
+//  h3,
+//  h4,
+//  h5,
+//  h6,
+//  p,
+//  ul[class],
+//  ol[class],
+//  li,
+//  figure,
+//  figcaption,
+//  blockquote,
+//  dl,
+//  dd {
+//    margin: 0;
+//  }
+//  img {
+//    max-width: 100%;
+//    display: block;
+//  }
+
+//  input,
+//  button,
+//  textarea,
+//  select {
+//    font: inherit;
+//  }
+
+ul {
+   list-style: none;
+   padding: 0;
+}
 
 body {
    margin: 0;
@@ -36,11 +93,6 @@ a {
 
    text-decoration: none;
    color: $white;
-}
-
-ul {
-   list-style: none;
-   padding: 0;
 }
 
 // .site-container {
@@ -107,7 +159,6 @@ section {
    align-items: center;
    margin-bottom: 5rem;
 
-
    h2 {
       line-height: 1;
    }
@@ -138,6 +189,8 @@ section {
    }
 }
 
+/*   HEADER   */
+
 /* Logo */
 .logo {
 }
@@ -145,66 +198,118 @@ section {
    max-width: 9rem;
 }
 /* Menu */
-.menu-list {
+.menu__body {
+}
+.menu__list {
    display: flex;
    margin: 0;
+}
+.menu__item {
+   position: relative;
+   padding: 1.6rem;
 
-   &__item {
-      position: relative;
-      padding: 1.6rem;
-
-      &:hover {
-         .menu-list__link,
-         .menu-list__icon {
-            color: $blue;
-            fill: $blue;
-         }
-         .menu-sublist {
-            display: block;
-         }
+   &:hover {
+      .menu__sub-list {
+         max-width: inherit;
+         visibility: visible;
+         opacity: 1;
+         top: 100%;
+      }
+      .menu__link {
+         color: $blue;
+      }
+      .menu__icon {
+         fill: $blue;
+         transform: rotate(-90deg);
       }
    }
-   &__icon {
-      margin-left: 1rem;
-      width: 1.6rem;
-      height: 1.6rem;
-
-      fill: $black;
-      transition: all 0.1s linear;
-   }
-   &__link {
-      display: flex;
-      transition: all 0.1s linear;
-   }
 }
-.menu-sublist {
-   display: none;
+.menu__link {
+   display: flex;
+   align-items: center;
+   transition: all 0.1s linear;
+
+   text-transform: uppercase;
+   font-size: 1.2rem;
+}
+.menu__icon {
+   margin-left: 1rem;
+   width: 1rem;
+   height: 1rem;
+
+   fill: $white;
+   transform: rotate(90deg);
+   transition: fill 0.1s linear, transform 0.2s linear;
+}
+/* Sub-menu */
+.menu__sub-list {
+   max-width: 0;
    padding: 2.5rem;
-   max-width: 90rem;
+   max-width: 0;
 
    background-color: $black-bg;
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   opacity: 0;
+   visibility: hidden;
 
    position: absolute;
-   top: 100%;
+   top: 110%;
    left: 50%;
    transform: translateX(-50%);
+   transition: all .3s ease;
+}
+.menu__sub-item {
+   padding: 0.5rem;
+   width: 100%;
+}
+.menu__sub-link {
+   font-size: 18px;
+   color: $white;
 
-   &__item {
-      padding: 0.5rem;
-      width: 100%;
-   }
-   &__link {
-      font-size: 18px;
-      color: $white;
-
-      transition: all 0.1s linear;
-      &:hover {
-         color: $blue;
-      }
+   transition: all 0.1s linear;
+   &:hover {
+      color: $blue;
    }
 }
+/* Burger */
+.burger {
+   display: none;
+   width: 3rem;
+   height: 2.2rem;
 
+   cursor: pointer;
+
+   position: relative;
+   z-index: 120;
+
+   span,
+   &::before,
+   &::after {
+      width: 100%;
+      height: 0.2rem;
+
+      background-color: $white;
+
+      position: absolute;
+      left: 0;
+
+      transition: all 0.3s linear;
+   }
+   span {
+      top: 50%;
+      transform: scale(1) translate(0px, -50%);
+   }
+   &::before,
+   &::after {
+      content: "";
+   }
+   &::before {
+      top: 0;
+   }
+   &::after {
+      bottom: 0;
+   }
+}
 
 /* Footer */
 .footer {
@@ -231,6 +336,7 @@ section {
    display: flex;
    justify-content: space-between;
    padding-bottom: 3rem;
+   flex-wrap: wrap;
 }
 .footer__header {
    &-subtitle {
@@ -244,6 +350,7 @@ section {
 }
 /* footer__menu */
 .footer__menu {
+
    &-item {
       max-width: 23rem;
 
@@ -262,7 +369,7 @@ section {
    }
    &-link {
       padding: 0.5rem 0;
-      transition: all .1s linear;
+      transition: all 0.1s linear;
       &:hover {
          color: $blue;
       }
@@ -272,4 +379,3 @@ section {
       }
    }
 }
-
