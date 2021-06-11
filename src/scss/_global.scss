@@ -7,85 +7,68 @@ html {
    box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
-   box-sizing: inherit;
-   margin: 0;
+ul[class],
+ol[class] {
    padding: 0;
 }
-// ul[class],
-// ol[class] {
-//    padding: 0;
-// }
 
-// html{
-//    box-sizing: border-box;
-//  }
+html {
+   box-sizing: border-box;
+}
 
-//  *,
-//  *::after,
-//  *::before{
-//    box-sizing: inherit;
-//  }
+*,
+*::after,
+*::before {
+   box-sizing: inherit;
+}
 
-//  ul[class],
-//  ol[class] {
-//    padding: 0;
-//  }
-//  ul[class] {
-//    list-style: none;
-//  }
-
- body,
- h1,
- h2,
- h3,
- h4,
- h5,
- h6,
- p,
- ul[class],
- ol[class],
- li,
- figure,
- figcaption,
- blockquote,
- dl,
- dd {
-   margin: 0;
- }
-//  img {
-//    max-width: 100%;
-//    display: block;
-//  }
-
-//  input,
-//  button,
-//  textarea,
-//  select {
-//    font: inherit;
-//  }
-
-ul {
-   list-style: none;
+ul[class],
+ol[class] {
    padding: 0;
+}
+ul[class] {
+   list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+   margin: 0;
+}
+img {
+   max-width: 100%;
+   display: block;
+}
+
+input,
+button,
+textarea,
+select {
+   font: inherit;
 }
 
 body {
    margin: 0;
 
-   font-family: "TT Norms", sans-serif;
    @include adaptiv-font(16, 12);
+   font-family: "TT Norms", sans-serif;
    color: $black-light;
-
    background-color: $white;
 
    position: relative;
-}
-
-img {
-   max-width: 100%;
 }
 
 a {
@@ -261,7 +244,7 @@ section {
    top: 110%;
    left: 50%;
    transform: translateX(-50%);
-   transition: all .3s ease;
+   transition: all 0.3s ease;
 }
 .menu__sub-item {
    padding: 0.5rem;
@@ -355,7 +338,6 @@ section {
 }
 /* footer__menu */
 .footer__menu {
-
    &-item {
       max-width: 23rem;
 
