@@ -9,9 +9,9 @@ if (menuLinks.length > 0) {
       menuLink.addEventListener('click', onMenuLinkClick);
    });
 
-   function onMenuLinkClick (e) {
+   function onMenuLinkClick(e) {
       const menuLink = e.target;
-      if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+      if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
          const gotoBlock = document.querySelector(menuLink.dataset.goto);
          const gotoBlockValue = gotoBlock.getBoundingClientRect().top;
 
@@ -32,15 +32,15 @@ const menuMobile = document.querySelector('.menu__body');
 let menuOpen = false;
 
 menuBtn.addEventListener('click', function () {
-    if (!menuOpen) {
-        menuBtn.classList.add('burger--open');
-        menuMobile.classList.add('menu__body--open');
-        menuOpen = true;
-    } else {
-        menuBtn.classList.remove('burger--open');
-        menuMobile.classList.remove('menu__body--open');
-        menuOpen = false;
-    }
+   if (!menuOpen) {
+      menuBtn.classList.add('burger--open');
+      menuMobile.classList.add('menu__body--open');
+      menuOpen = true;
+   } else {
+      menuBtn.classList.remove('burger--open');
+      menuMobile.classList.remove('menu__body--open');
+      menuOpen = false;
+   }
 })
 /* Burger */
 
@@ -68,17 +68,17 @@ new Swiper('.intro__items', {
       // },
       // // when window width is >= 480px
       480: {
-        slidesPerView: 2.3,
-        allowTouchMove: true,
-        centeredSlidesBounds: true,
+         slidesPerView: 2.3,
+         allowTouchMove: true,
+         centeredSlidesBounds: true,
 
       },
       // when window width is >= 640px
       1400: {
-        slidesPerView: 4,
-        centeredSlides: false,
+         slidesPerView: 4,
+         centeredSlides: false,
       }
-    }
+   }
 });
 
 new Swiper('.slider-fluid__container', {
@@ -92,18 +92,19 @@ new Swiper('.slider-fluid__container', {
    },
    autoHeight: true,
 });
-new Swiper('.partners-slider__container', {
+
+
+let partnersSlider = new Swiper('.partners-slider__container', {
    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.partners-slider__btn-next',
+      prevEl: '.partners-slider__btn-prev',
    },
    keyboard: {
       enabled: true,
       onlyInViewport: true,
    },
-   centeredSlides: true,
-   slidesPerView: 2.5,
    spaceBetween: 10,
+   // centeredSlides: true,
    loop: true,
    scrollbar: {
       el: '.swiper-scrollbar',
@@ -112,21 +113,32 @@ new Swiper('.partners-slider__container', {
 
    breakpoints: {
       320: {
-         centeredSlides: false,
          loop: false,
+         centeredSlides: false,
+         slidesPerView: 1.5,
+      },
+      520: {
+         loop: false,
+         centeredSlides: false,
+         slidesPerView: 2.5,
       },
       768: {
+         loop: false,
+         centeredSlides: false,
          slidesPerView: 4.5,
       },
-      991: {
+      1025: {
          slidesPerView: 5.5,
+         loop: true,
+         centeredSlides: true,
       },
       1300: {
          slidesPerView: 7.5,
+         centeredSlides: true,
       }
    }
-
 });
+
 
 
 

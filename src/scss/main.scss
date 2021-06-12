@@ -269,11 +269,8 @@
 
 /* partners-slider */
 .partners-slider {
-   &__container {
+      overflow: hidden;
       position: relative;
-   }
-   &__wrapper {
-   }
    &__slide {
       display: flex;
       align-items: center;
@@ -440,7 +437,7 @@
       justify-content: flex-end;
    }
    &--partners {
-      top: 0;
+      top: -5.5em;
    }
 }
 .slider__btn {
@@ -466,6 +463,17 @@
    }
    &--next {
       transform: rotate(180deg);
+   }
+   &--loop {
+      background-color: transparent;
+      border: 1px solid #dbdbdb;
+      .slider__btn-icon {
+         fill: #dbdbdb;
+      }
+      &:hover {
+         background-color: $blue;
+         border-color: $blue;
+      }
    }
 }
 .swiper-button-disabled {
