@@ -109,6 +109,7 @@ let partnersSlider = new Swiper('.partners-slider__container', {
    scrollbar: {
       el: '.swiper-scrollbar',
       draggable: true,
+      dragSize: 30,
    },
 
    breakpoints: {
@@ -126,6 +127,9 @@ let partnersSlider = new Swiper('.partners-slider__container', {
          loop: false,
          centeredSlides: false,
          slidesPerView: 4.5,
+         scrollbar: {
+            dragSize: 60,
+         },
       },
       1025: {
          slidesPerView: 5.5,
