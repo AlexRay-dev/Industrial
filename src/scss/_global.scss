@@ -78,9 +78,12 @@ a {
    color: $white;
 }
 
-// .site-container {
+.site-container {
 //   overflow: hidden;
-// }
+  &--bg-gray {
+     background-color: #FAFAFA;
+  }
+}
 
 .container {
    margin: 0 auto;
@@ -233,8 +236,10 @@ section {
 
 /*   breadcrumb   */
 .breadcrumb {
+   padding: 2rem 0 1rem;
+}
+.breadcrumb__list {
    display: flex;
-   margin-bottom: 1rem !important;
 }
 .breadcrumb__item {
    &:last-child {

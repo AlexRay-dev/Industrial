@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="theme-color" content="#111111">
+   <title>Industrial</title>
+   <link rel="stylesheet" href="css/vendor.css">
+   <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+   <div class="site-container  site-container--bg-gray">
+      @include('partials/sprite.html')
+      <header class="header  header--bgWhite">
+         @include('partials/header.html')
+      </header>
+
+      <div class="breadcrumb">
+         <div class="container">
+            <ul class="breadcrumb__list">
+               <li class="breadcrumb__item">
+                  <a class="breadcrumb__item-link" href="index.html">Главная</a>
+               </li>
+               <li class="breadcrumb__item">
+                  <a class="breadcrumb__item-link" href="services.html">Услуги</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+
+      <!-- Activity -->
+      <section class="activity  activity--services">
+         <div class="container">
+            <div class="section__header">
+               <div class="section__header-left">
+                  <h2 class="section__header-title">Направления деятельности</h2>
+               </div>
+            </div>
+         </div>
+         <div class="activity__inner">
+            <div class="activity__item">
+               <img class="activity__item-img" src="img/activity-item_1.jpg" alt="">
+
+
+               <a class="activity__item-content" href="#">
+                  <h5 class="activity__item-title">Строительно-монтажные работы</h5>
+                  <div class="activity__item-btn">
+                     <svg class="activity__item-icon">
+                        <use href="#arrow"></use>
+                     </svg>
+                  </div>
+               </a>
+            </div>
+            <div class="activity__item">
+               <img class="activity__item-img" src="img/activity-item_2.jpg" alt="">
+
+
+               <a class="activity__item-content" href="#">
+                  <h5 class="activity__item-title">Строительно-монтажные работы</h5>
+                  <div class="activity__item-btn">
+                     <svg class="activity__item-icon">
+                        <use href="#arrow"></use>
+                     </svg>
+                  </div>
+               </a>
+            </div>
+            <div class="activity__item">
+               <img class="activity__item-img" src="img/activity-item_3.jpg" alt="">
+
+
+               <a class="activity__item-content" href="#">
+                  <h5 class="activity__item-title">Строительно-монтажные работы</h5>
+                  <div class="activity__item-btn">
+                     <svg class="activity__item-icon">
+                        <use href="#arrow"></use>
+                     </svg>
+                  </div>
+               </a>
+            </div>
+         </div>
+      </section>
+
+      @include('partials/footer.html')
+   </div>
+
+
+   <script src="js/vendor.js"></script>
+   <script src="js/main.js"></script>
+</body>
+
+</html>

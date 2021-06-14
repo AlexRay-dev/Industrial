@@ -222,6 +222,12 @@
 }
 
 /* Activity */
+.activity {
+   &--services {
+      margin-top: 0;
+      margin-bottom: 3.125em;
+   }
+}
 .activity__inner {
    display: flex;
    justify-content: center;
@@ -257,7 +263,7 @@
       position: absolute;
       left: 0;
       top: 0;
-      z-index: -1;
+      z-index: 1;
    }
    &-content {
       display: flex;
@@ -266,6 +272,9 @@
       flex: 1 0;
       height: 5em;
       max-width: 100%;
+
+      position: relative;
+      z-index: 2  ;
 
       background-color: $blue;
       transition: background-color 0.1s linear;
