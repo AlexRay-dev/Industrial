@@ -145,6 +145,9 @@ section {
    align-items: center;
    margin-bottom: 3.125em;
 
+   &--mobile {
+      display: none;
+   }
    &-title {
       line-height: 1;
    }
@@ -176,14 +179,104 @@ section {
       height: 1.4rem;
    }
 }
+.section-pagination {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.section-pagination__item,
+.section-pagination__arrow {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 5rem;
+   height: 5rem;
 
-/*   HEADER   */
+   border: 1px solid #dbdbdb;
+   background-color: transparent;
 
+   transition: all 0.1s linear;
+}
+.section-pagination__item {
+   color: $black;
+   font-weight: 600;
+   text-align: center;
+   font-size: 1.6rem;
+
+   &--active,
+   &:hover {
+      color: $white;
+
+      border-color: $blue;
+      background-color: $blue;
+   }
+}
+.section-pagination__arrow {
+   margin: 0 0.5rem;
+   &:hover {
+      border-color: $blue;
+      .section-pagination__arrow-icon {
+         fill: $blue;
+
+      }
+   }
+   &-icon {
+      width: 1.2rem;
+      height: 1.2rem;
+      fill: #dbdbdb;
+
+      &--prev {
+         transform: rotate(180deg);
+      }
+   }
+}
+
+/*   breadcrumb   */
+.breadcrumb {
+   display: flex;
+   margin-bottom: 1rem !important;
+}
+.breadcrumb__item {
+   &:last-child {
+      .breadcrumb__item-link {
+         color: $blue;
+      }
+   }
+   &:not(:last-child)::after {
+      content: "/";
+      display: inline-block;
+      padding: 0 0.5rem 0 0.3rem;
+      font-size: 1.2rem;
+
+      color: #bababa;
+   }
+
+   &-link {
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-transform: capitalize;
+      color: #bababa;
+
+      transition: all 0.1s linear;
+
+      &:hover {
+         color: $blue;
+      }
+   }
+}
+.breadcrumb__link {
+   &::after {
+      content: "/";
+   }
+}
 /* Logo */
 .logo {
 }
 .logo__img {
    max-width: 9rem;
+   &--black {
+      display: none;
+   }
 }
 /* Menu */
 .menu__body {
@@ -219,6 +312,7 @@ section {
 
    text-transform: uppercase;
    font-size: 1.2rem;
+   font-weight: 700;
 }
 .menu__icon {
    margin-left: 1rem;
