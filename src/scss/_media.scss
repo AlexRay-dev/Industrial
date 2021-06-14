@@ -202,6 +202,9 @@
    section {
       margin-top: 4em;
    }
+   .breadcrumb {
+      display: none;
+   }
    .section__header {
       margin-bottom: 2em;
       &-left {
@@ -210,6 +213,21 @@
       }
       &-num {
          margin: 0 0 0.5em;
+      }
+   }
+   /* pricing */
+   .pricing__item {
+      &-type {
+         display: none;
+      }
+      &-btn {
+         img {
+            min-width: 2rem;
+            min-height: 2rem;
+         }
+         span {
+            display: none;
+         }
       }
    }
    /* News */
