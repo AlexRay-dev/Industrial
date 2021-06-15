@@ -230,6 +230,10 @@
          }
       }
    }
+   /* licenses */
+   .licenses__item {
+      max-width: 13.5rem;
+   }
    /* News */
    .news__inner {
    }
@@ -299,6 +303,7 @@
          display: none;
       }
    }
+
    /* Footer */
    .footer__header {
       width: 100%;
