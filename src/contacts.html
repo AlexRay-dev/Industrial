@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="theme-color" content="#111111">
+   <title>Industrial</title>
+   <link rel="stylesheet" href="css/vendor.css">
+   <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+   <div class="site-container  site-container--bg-gray">
+      @include('partials/sprite.html')
+      <header class="header  header--bgWhite">
+         @include('partials/header.html')
+      </header>
+
+      <div class="breadcrumb">
+         <div class="container">
+            <ul class="breadcrumb__list">
+               <li class="breadcrumb__item">
+                  <a class="breadcrumb__item-link" href="index.html">Главная</a>
+               </li>
+               <li class="breadcrumb__item">
+                  <a class="breadcrumb__item-link" href="pricing.html">Тарифы</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+
+
+      <!-- Contacts -->
+      <section class="contacts">
+         <div class="container">
+            <div class="section__header">
+               <div class="section__header-left">
+                  <h2 class="section__header-title">Контакты</h2>
+               </div>
+            </div>
+
+            <div class="contacts__items">
+               <div class="contacts__item">
+                  <h3 class="contacts__item-title">Санкт-Петербург
+                  </h3>
+               </div>
+
+
+               <div class="contacts__item">
+                  <img class="contacts__item-icon" src="img/marker-place.svg" alt="">
+
+                  <div class="contacts__item-content">
+                     <h5 class="contacts__item-subtitle">ООО "Пром Импульс"</h5>
+
+                     <p class="contacts__item-text">196084, г. Санкт-Петербург,
+                        ул. Рощинская, д. 5, лит. И</p>
+                  </div>
+               </div>
+
+
+               <div class="contacts__item">
+                  <img class="contacts__item-icon" src="img/phone.svg" alt="">
+
+                  <div class="contacts__item-content">
+                     <h5 class="contacts__item-subtitle  contacts__item-subtitle--sm">Тел./факс:</h5>
+
+                     <a class="contacts__item-link" href="+78126037372">+7 (812) 603-73-72</a>
+                  </div>
+               </div>
+
+
+               <div class="contacts__item">
+                  <img class="contacts__item-icon" src="img/mail.svg" alt="">
+
+                  <div class="contacts__item-content">
+                     <h5 class="contacts__item-subtitle  contacts__item-subtitle--sm">Email:</h5>
+
+                     <a class="contacts__item-link" href="mailto:office@promimpuls. ru">office@promimpuls. ru</a>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+
+         <div class="contacts__map">
+            <img class="contacts__map-img" src="img/contacts-map.jpg" alt="">
+            <img class="contacts__map-marker" src="img/map-marker.png" alt="">
+         </div>
+
+         <div class="contacts__form">
+            <div class="container">
+               <div class="contacts__form-wrapper">
+                  <h3 class="contacts__form-title">Для получения детальной
+                     информации воспользуйтесь
+                     формой обратной связи</h3>
+
+                  <form class="form" action="">
+                     <div class="form__wrapper">
+                        <fieldset class="form__item  form__item--input">
+                           <legend class="form__item-title">Имя Фамилия</legend>
+
+                           <input class="form__item-input" type="text">
+                        </fieldset>
+
+                        <fieldset class="form__item  form__item--input">
+                           <legend class="form__item-title">Номер телефона</legend>
+
+                           <input class="form__item-input  form__item-input--required" type="text">
+                        </fieldset>
+
+                        <fieldset class="form__item  form__item--input">
+                           <legend class="form__item-title">Ваша почта</legend>
+
+                           <input class="form__item-input" type="text" placeholder="Email">
+                        </fieldset>
+                     </div>
+
+                     <fieldset class="form__item">
+                        <textarea class="form__item-area" placeholder="Ваш вопрос"></textarea>
+                     </fieldset>
+                     <!-- <div class="form__syka">
+
+                     </div> -->
+
+                  </form>
+               </div>
+
+            </div>
+         </div>
+
+      </section>
+
+      @include('partials/footer.html')
+   </div>
+
+
+   <script src="js/vendor.js"></script>
+   <script src="js/main.js"></script>
+</body>
+
+</html>
