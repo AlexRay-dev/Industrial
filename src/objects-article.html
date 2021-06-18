@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="theme-color" content="#111111">
+   <title>Industrial</title>
+   <link rel="stylesheet" href="css/vendor.css">
+   <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+   <div class="site-container  site-container--bg-gray">
+      @include('partials/sprite.html')
+
+      <header class="header  header--bgWhite">
+         @include('partials/header.html')
+      </header>
+
+      <div class="breadcrumb">
+         <div class="container">
+            <ul class="breadcrumb__list">
+               <li class="breadcrumb__item">
+                  <a class="breadcrumb__item-link" href="index.html">Главная</a>
+               </li>
+               <li class="breadcrumb__item">
+                  <a class="breadcrumb__item-link" href="objects.html">Наши объекты</a>
+               </li>
+               <li class="breadcrumb__item">
+                  <a class="breadcrumb__item-link" href="objects-article.html">Котельная 1</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+
+
+      <!-- Objects -->
+      <section class="objects">
+         <img class="objects__img" src="img/bg.jpg" alt="image">
+
+         <article class="article  article--objects">
+
+            <header class="article__header  article__header--objects">
+               <div class="article__header-box  article__header-box--blue-bg  article__header-box--objects">
+                  <h2 class="article__header-title">Котельная 1</h2>
+                  <h4 class="article__header-subtitle">
+                     <img class="article__header-icon" src="img/marker-place.svg" alt="">Санкт-Петербург, ул.Уличная
+                     22
+                  </h4>
+               </div>
+
+               <div class="article__numbers">
+                  <div class="article__numbers-item">
+                     <img class="article__numbers-icon" src="img/article-numbers-icon_1.svg" alt="">
+
+                     <div class="article__numbers-header">
+                        <div class="article__numbers-title" id="numbers_110">110</div>
+                        <div class="article__numbers-title">КВ</div>
+                     </div>
+
+                     <p class="article__numbers-text">Напряжение</p>
+                  </div>
+
+                  <div class="article__numbers-item">
+                     <img class="article__numbers-icon" src="img/article-numbers-icon_2.svg" alt="">
+
+                     <div class="article__numbers-header">
+                        <div class="article__numbers-title" id="numbers_25">25</div>
+                        <div class="article__numbers-title">дней</div>
+                     </div>
+
+                     <p class="article__numbers-text">Срок разработки</p>
+                  </div>
+               </div>
+            </header>
+            <div class="container">
+
+               <div class="article__body">
+                  <h3 class="article__title">Заголовок</h3>
+
+                  <p class="article__text">Равным образом новая модель организационной деятельности позволяет выполнять
+                     важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач.
+                     Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское
+                     обеспечение
+                     нашей деятельности позволяет оценить значение позиций, занимаемых участниками в отношении
+                     поставленных
+                     задач.</p>
+
+                  <p class="article__text">Товарищи! начало повседневной работы по формированию позиции в значительной
+                     степени обуславливает создание системы обучения кадров, соответствует насущным потребностям.
+                     Не следует, однако забывать, что консультация с широким активом требуют определения и уточнения
+                     системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка,
+                     а также постоянное информационно-пропагандистское обеспечение нашей деятельности влечёт за собой
+                     процесс внедрения и модернизации форм развития.</p>
+
+                  <p class="article__text">С другой стороны постоянный количественный рост и сфера нашей активности
+                     позволяет выполнять важные задания по разработке направлений прогрессивного развития. Повседневная
+                     практика показывает, что постоянный количественный рост и сфера нашей активности требуют
+                     от нас анализа дальнейших направлений развития.</p>
+
+                  <p class="article__text">С другой стороны постоянный количественный рост и сфера нашей активности
+                     позволяет выполнять важные задания по разработке существенных финансовых и административных
+                     условий.
+                     Товарищи! дальнейшее развитие различных форм деятельности требуют от нас анализа новых предложений.
+                     Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей
+                     деятельности
+                     способствует подготовки и реализации форм развития. С другой стороны рамки и место обучения кадров
+                     представляет собой интересный эксперимент проверки направлений прогрессивного развития.</p>
+               </div>
+            </div>
+         </article>
+      </section>
+
+
+      <!-- Partners-slider -->
+      <section class="partners-slider  partners-slider--mb50">
+         <div class="container">
+            <div class="section__header">
+               <div class="section__header-left">
+                  <h2 class="section__header-title">Партнеры</h2>
+               </div>
+            </div>
+         </div>
+
+         <div class="partners-slider__container  swiper-container">
+
+            <div class="partners-slider__wrapper  swiper-wrapper">
+               <div class="partners-slider__slide  swiper-slide">
+                  <img class="partners-slider__slide-img" src="img/partners-item_1.png" alt="роснефть">
+               </div>
+
+               <div class="partners-slider__slide  swiper-slide">
+                  <img class="partners-slider__slide-img" src="img/partners-item_2.png" alt="газпром">
+               </div>
+
+               <div class="partners-slider__slide  swiper-slide">
+                  <img class="partners-slider__slide-img" src="img/partners-item_3.png" alt="лукойл">
+               </div>
+
+               <div class="partners-slider__slide  swiper-slide">
+                  <img class="partners-slider__slide-img" src="img/partners-item_4.png" alt="сколково">
+               </div>
+               <div class="partners-slider__slide  swiper-slide">
+                  <img class="partners-slider__slide-img" src="img/partners-item_1.png" alt="сколково">
+               </div>
+               <div class="partners-slider__slide  swiper-slide">
+                  <img class="partners-slider__slide-img" src="img/partners-item_2.png" alt="сколково">
+               </div>
+               <div class="partners-slider__slide  swiper-slide">
+                  <img class="partners-slider__slide-img" src="img/partners-item_3.png" alt="сколково">
+               </div>
+               <div class="partners-slider__slide  swiper-slide">
+                  <img class="partners-slider__slide-img" src="img/partners-item_4.png" alt="сколково">
+               </div>
+            </div>
+
+            <div class="slider__buttons  slider__buttons--partners">
+               <div class="container">
+                  <div class="slider__buttons-wrapper">
+                     <div class="slider__btn  slider__btn--prev swiper-button-prev">
+                        <svg class="slider__btn-icon">
+                           <use href='#arrow'></use>
+                        </svg>
+                     </div>
+                     <div class="slider__btn  swiper-button-next">
+                        <svg class="slider__btn-icon">
+                           <use href='#arrow'></use>
+                        </svg>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="partners-scrollbar  swiper-scrollbar"></div>
+         </div>
+      </section>
+
+
+      @include('partials/footer.html')
+   </div>
+
+
+   <script src="js/vendor.js"></script>
+   <script src="js/main.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+
+</html>

@@ -419,7 +419,6 @@ section {
    width: 100%;
    height: 100%;
 
-
    font-size: 1.6rem;
    color: $white;
 
@@ -508,4 +507,122 @@ section {
          font-weight: 500;
       }
    }
+}
+
+/* article */
+.article {
+   display: flex;
+   justify-content: space-between;
+   &--objects {
+      .article__header {
+         margin-left: 1.5rem;
+         align-items: center;
+
+         margin-top: -9rem;
+         flex-direction: column;
+         &-box {
+            min-width: 25em;
+            padding: 3.125em 1.875em;
+         }
+      }
+      .article__numbers {
+         margin-top: 5em;
+
+         position: sticky;
+         top: 2rem;
+      }
+      .article__body {
+         margin-top: 5em;
+         margin-left: 3em;
+         max-width: 91rem;
+      }
+   }
+}
+.article__header {
+   display: flex;
+   position: relative;
+
+   &-box {
+      max-width: 100%;
+      &--blue-bg {
+         background-color: $blue;
+         .article__header-title {
+            color: $white;
+         }
+      }
+   }
+   &-subtitle {
+      display: flex;
+      align-items: center;
+      margin-top: 0.5em;
+
+      font-size: 1.4rem;
+      color: $white;
+   }
+   &-icon {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1rem;
+   }
+}
+.article__numbers {
+   display: flex;
+   flex-direction: column;
+
+   &--blue-bg {
+      background-color: $blue;
+      .article__numbers-title,
+      .article__numbers-text {
+         color: $white;
+      }
+   }
+   &-header {
+      display: flex;
+   }
+   &-item {
+      &:not(:last-child) {
+         margin-bottom: 5.625em;
+      }
+      position: relative;
+   }
+   &-title {
+      &:not(:first-child) {
+         margin-left: 0.25em;
+      }
+
+      @include adaptiv-font(80, 30);
+      color: $blue;
+      font-weight: 800;
+      line-height: 1.2;
+
+      position: relative;
+      z-index: 5;
+   }
+   &-text {
+      @include adaptiv-font(18, 16);
+      color: #8b8b8b;
+   }
+   &-icon {
+      width: 4rem;
+      height: 4rem;
+
+      position: absolute;
+      top: 0;
+      left: -2rem;
+      z-index: 2;
+   }
+}
+.article__body {
+}
+.article__title {
+   margin-bottom: 2rem;
+}
+.article__text {
+   &:not(:last-child) {
+      margin-bottom: 2rem;
+   }
+
+   @include adaptiv-font(18, 12);
+   color: $black;
+   line-height: 1.8;
 }

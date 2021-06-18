@@ -1,5 +1,9 @@
 "use strict"
 
+
+
+
+
 /* Прокрутка при клике */
 
 const menuLinks = document.querySelectorAll(".intro__menu-link[data-goto]");
@@ -173,6 +177,47 @@ function onTabBtnClick(item) {
    });
 };
 /* Example-tabs */
+
+
+var image = document.getElementsByClassName('objects__img');
+new simpleParallax(image, {
+	scale: 1.3,
+   delay: .3,
+	transition: 'cubic-bezier(0,0,0,1)'
+});
+
+
+
+const time = 2500;
+const step = 1;
+
+function outNum110(num, elem) {
+  let e = document.querySelector("#numbers_110");
+  let n = 0;
+  let t = Math.round(time / (num / step));
+  let interval = setInterval(() => {
+    n = n + step;
+    if (n == num) {
+      clearInterval(interval);
+    }
+    e.innerHTML = n;
+  }, t);
+}
+function outNum25(num, elem) {
+  let e = document.querySelector("#numbers_25");
+  let n = 0;
+  let t = Math.round(time / (num / step));
+  let interval = setInterval(() => {
+    n = n + step;
+    if (n == num) {
+      clearInterval(interval);
+    }
+    e.innerHTML = n;
+  }, t);
+}
+
+outNum110(110, "#numbers_110");
+outNum25(25, "#numbers_25");
 
 
 

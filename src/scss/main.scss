@@ -317,6 +317,9 @@
       &-img {
       }
    }
+   &--mb50 {
+      margin-bottom: 5rem;
+   }
 }
 /* Map */
 .map__item {
@@ -793,6 +796,25 @@
       font-weight: 700;
       color: $white
    }
+}
+
+
+
+
+.out-num {
+   font-family: Impact, sans-serif;
+   font-size: 70px;
+   font-weight: 900;
+   margin: 30px;
+ }
+
+.objects {
+   margin-top: 2rem;
+}
+.objects__img {
+   height: 31.25em;
+   width: 100%;
+   object-fit: cover;
 }
 
 @import "_media";
