@@ -172,6 +172,15 @@
 }
 
 @media (max-width: 900px) {
+   /* Article */
+   .article {
+      &--services {
+         .article__numbers {
+            height: 40rem;
+         }
+      }
+   }
+   /* Footer */
    .footer-top {
       .container {
          padding: 0 0.5rem;
@@ -197,6 +206,13 @@
    .footer-bottom__item {
       &:not(:last-child) {
          margin-bottom: 1rem;
+      }
+   }
+   /* services-slider */
+   .services-slider {
+      &__slide {
+         height: 27.5em !important;
+
       }
    }
 }
@@ -256,8 +272,67 @@
             margin-left: 0;
          }
       }
-   }
 
+      &--services {
+         .article__header {
+            flex-direction: column;
+            .article__text {
+               width: 100%;
+               padding: 5rem 1.5rem;
+            }
+            &-box {
+               width: 100%;
+               padding: 2rem 1.5rem 3rem;
+            }
+         }
+         .article__numbers {
+            order: -1;
+            width: 100%;
+            padding: 0 5rem;
+            align-items: start;
+            height: 41rem;
+
+            position: static;
+         }
+         .article__body {
+            flex-direction: column;
+            &-wrapper {
+               width: 100%;
+               padding: 0 1.5rem;
+            }
+            .article__text {
+               padding-right: 0;
+            }
+         }
+      }
+   }
+   /* Intro */
+   .intro {
+      &--services {
+         height: 24rem;
+      }
+   }
+   /* services */
+   .services {
+      margin-top: 15rem;
+      .container {
+         padding: 0;
+      }
+   }
+   /* services-slider */
+   .services-slider {
+      &__slide {
+         height: 22em !important;
+      }
+   }
+   .services-slider__buttons {
+      .services-slider__btn-prev {
+         left: 0;
+      }
+      .services-slider__btn-next {
+         right: 0;
+      }
+   }
    /* objects */
    .objects__img {
       max-height: 25rem;
@@ -375,6 +450,18 @@
          color: $white;
          font-size: 1.6rem;
          font-weight: 500;
+      }
+   }
+   /* services-slider */
+   .services-slider {
+      &__slide {
+         height: 18em !important;
+      }
+   }
+   .slider__btn {
+      &--square {
+         width: 4rem;
+         height: 4rem;
       }
    }
    /* footer-bottom */

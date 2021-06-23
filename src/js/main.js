@@ -147,6 +147,43 @@ let partnersSlider = new Swiper('.partners-slider__container', {
    }
 });
 
+new Swiper('.slider-fluid__container', {
+   navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+   },
+   keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+   },
+   autoHeight: true,
+});
+
+
+let servicesSlider = new Swiper('.services-slider__container', {
+   navigation: {
+      nextEl: '.services-slider__btn-next',
+      prevEl: '.services-slider__btn-prev',
+   },
+   keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+   },
+   slidesPerView: 1.5,
+   centeredSlides: true,
+   spaceBetween: 10,
+   loop: true,
+
+   breakpoints: {
+      0: {
+         slidesPerView: 1,
+      },
+      768: {
+         slidesPerView: 1.5,
+      },
+   }
+});
+
 
 
 
