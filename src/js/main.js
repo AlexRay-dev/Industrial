@@ -51,36 +51,27 @@ menuBtn.addEventListener('click', function () {
 
 
 
-/* Intro-slider */
-new Swiper('.intro__items', {
+/* intro__slider */
+new Swiper('.intro__slider', {
    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.intro__slider-btn--next',
+      prevEl: '.intro__slider-btn--prev',
    },
    keyboard: {
       enabled: true,
       onlyInViewport: true,
    },
-   slidesPerView: 4,
    allowTouchMove: false,
+   spaceBetween: 10,
 
    breakpoints: {
-      // when window width is >= 320px
-      // 320: {
-      //   slidesPerView: 2,
-      //   spaceBetween: 20
-      // },
-      // // when window width is >= 480px
       480: {
-         slidesPerView: 2.3,
+         slidesPerView: 1,
          allowTouchMove: true,
-         centeredSlidesBounds: true,
-
       },
-      // when window width is >= 640px
-      1400: {
+      1024: {
          slidesPerView: 4,
-         centeredSlides: false,
+         loop: false,
       }
    }
 });
