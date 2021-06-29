@@ -28,7 +28,6 @@ ol[class] {
    list-style: none;
 }
 
-
 body,
 h1,
 h2,
@@ -474,9 +473,8 @@ section {
 .form {
    display: flex;
    align-items: flex-end;
-   width: 100%;
    justify-content: flex-end;
-   height: 20rem;
+   width: 100%;
 }
 .form__wrapper {
    display: block;
@@ -484,30 +482,50 @@ section {
    width: 100%;
 }
 .form__item {
-   margin: 0.5rem;
-   max-width: 57rem;
+   display: flex;
+   align-items: center;
+   max-width: 33rem;
    width: 100%;
-   height: 100%;
+   height: 6.8rem;
+   margin: 0;
 
    font-size: 1.6rem;
    color: $white;
 
    border: 1px solid #393e52;
 
-   &--input {
-      max-width: 33rem;
-      width: 100%;
-   }
    &-title {
       padding: 0 1rem;
 
       font-size: 1.2rem;
       color: #535970;
    }
+   &-input,
+   &-area {
+      background: none;
+      border: none;
+      width: 100%;
+      outline: none;
+
+      color: $white;
+      font-size: 1.6rem;
+   }
+   &--area {
+      align-items: start;
+      margin-left: 1rem;
+      height: 19.8rem;
+      width: 100%;
+      max-width: 57rem;
+   }
    &-area {
       height: 100%;
-   }
-   &-input {
+      padding: 1rem 0;
+
+      resize: none;
+
+      &::placeholder {
+         color: #6A6E81;
+      }
    }
 }
 
@@ -591,10 +609,8 @@ section {
          margin-bottom: 2rem;
       }
       .article__numbers {
-
       }
       .article__body {
-
       }
    }
    &--objects {
@@ -622,7 +638,6 @@ section {
       }
    }
 
-
    &--services {
       flex-direction: column;
       padding-bottom: 5rem;
@@ -634,7 +649,7 @@ section {
             background-color: $white;
 
             font-weight: 700;
-            @include adaptiv-font(18,14);
+            @include adaptiv-font(18, 14);
          }
          &-box {
             display: flex;
@@ -662,13 +677,12 @@ section {
             &:not(:last-child) {
                margin-bottom: 5rem;
             }
-
          }
          &-header {
             position: relative;
 
             &::before {
-               content: '';
+               content: "";
                display: block;
                height: 1.1rem;
                width: 1.1rem;
@@ -693,13 +707,12 @@ section {
 
             position: relative;
             &::before {
-               content: '';
+               content: "";
                display: block;
                height: 100%;
                width: 1px;
 
                background-color: $white;
-
 
                position: absolute;
                left: -3rem;
@@ -707,7 +720,6 @@ section {
                bottom: 0;
             }
          }
-
       }
       .article__body {
          display: flex;
@@ -718,7 +730,7 @@ section {
             padding-top: 5rem;
             padding-bottom: 5rem;
          }
-         .article__text{
+         .article__text {
             padding-right: 5rem;
          }
       }
@@ -842,7 +854,6 @@ section {
    margin: 5rem 0;
    &-item {
       &--item {
-
       }
    }
    &-title,
@@ -852,7 +863,7 @@ section {
       color: $black;
       line-height: 1.8;
       &:first-child {
-      };
+      }
       &:not(:first-child) {
          text-align: center;
       }
@@ -861,30 +872,29 @@ section {
       font-size: 1.6rem;
       font-weight: 500;
 
-      background-color: #D9EBF5;
+      background-color: #d9ebf5;
 
       &:nth-child(even) {
-         background-color: #C3DDED;
+         background-color: #c3dded;
       }
    }
    &-cell {
       min-width: 22.5rem;
 
-      @include adaptiv-font(18,16);
+      @include adaptiv-font(18, 16);
 
-      background-color: #F0F6F9;
+      background-color: #f0f6f9;
 
       span {
          font-weight: 500;
       }
       &:nth-child(even) {
-         background-color: #D9EBF5;
+         background-color: #d9ebf5;
       }
       &:first-child {
          width: 100%;
       }
    }
-
 }
 .article__title {
    margin-bottom: 2rem;
@@ -898,14 +908,13 @@ section {
       padding: 2.25em 1.875em;
 
       font-weight: 500;
-      color: #5F6C72;
+      color: #5f6c72;
 
-      background-color: #F0F6F9;
+      background-color: #f0f6f9;
    }
    &:not(:last-child) {
       margin-bottom: 2rem;
    }
 }
 .article__list {
-
 }

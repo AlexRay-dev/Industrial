@@ -182,6 +182,19 @@
          display: flex !important;
       }
    }
+   /* contacts */
+   .contacts__form {
+      &-wrapper {
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+      }
+      &-title {
+         max-width: 100%;
+         margin-bottom: 2rem;
+      }
+   }
+
 }
 
 @media (max-width: 900px) {
@@ -375,6 +388,25 @@
    .intro {
       &--sm {
          height: 24rem;
+      }
+   }
+   /* Form */
+   .form {
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+   }
+   .form__wrapper {
+      margin-bottom: .5rem;
+      max-width: 100%;
+   }
+   .form__item {
+      max-width: 40rem;
+
+      &--area {
+         margin-left: 0;
+         height: 10rem;
+         max-width: 40rem;
       }
    }
    /* services */
