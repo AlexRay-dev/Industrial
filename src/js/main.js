@@ -183,6 +183,18 @@ let servicesSlider = new Swiper('.services-slider__container', {
       },
    }
 });
+let articleSlider = new Swiper('.article__slider', {
+   navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+   },
+   keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+   },
+   slidesPerView: 1,
+   loop: true,
+});
 
 
 

@@ -25,10 +25,9 @@ html {
 ul[class],
 ol[class] {
    padding: 0;
-}
-ul[class] {
    list-style: none;
 }
+
 
 body,
 h1,
@@ -584,6 +583,20 @@ section {
 .article {
    display: flex;
    justify-content: space-between;
+
+   &--news {
+      max-width: 98rem;
+      flex-direction: column;
+      .article__header {
+         margin-bottom: 2rem;
+      }
+      .article__numbers {
+
+      }
+      .article__body {
+
+      }
+   }
    &--objects {
       .article__header {
          margin-left: 1.5rem;
@@ -786,16 +799,113 @@ section {
    }
 }
 .article__body {
+   h5 {
+      color: $black;
+   }
+   ol,
+   ul {
+      margin-top: 0;
+      margin-bottom: 5rem;
+      padding-left: 2em;
+
+      @include adaptiv-font(18, 12);
+      color: $black;
+      line-height: 1.8;
+   }
+   .pricing__item {
+      margin-top: 5rem;
+   }
+}
+.article__slider {
+   margin: 5rem 0;
+   max-width: 61.25em;
+   width: 100%;
+   height: 40em;
+
+   &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+   &-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      z-index: inherit;
+      &--prev {
+         left: 0;
+      }
+   }
+}
+.article__table {
+   margin: 5rem 0;
+   &-item {
+      &--item {
+
+      }
+   }
+   &-title,
+   &-cell {
+      padding: 0.9rem 3rem;
+
+      color: $black;
+      line-height: 1.8;
+      &:first-child {
+      };
+      &:not(:first-child) {
+         text-align: center;
+      }
+   }
+   &-title {
+      font-size: 1.6rem;
+      font-weight: 500;
+
+      background-color: #D9EBF5;
+
+      &:nth-child(even) {
+         background-color: #C3DDED;
+      }
+   }
+   &-cell {
+      min-width: 22.5rem;
+
+      @include adaptiv-font(18,16);
+
+      background-color: #F0F6F9;
+
+      span {
+         font-weight: 500;
+      }
+      &:nth-child(even) {
+         background-color: #D9EBF5;
+      }
+      &:first-child {
+         width: 100%;
+      }
+   }
+
 }
 .article__title {
    margin-bottom: 2rem;
 }
 .article__text {
-   &:not(:last-child) {
-      margin-bottom: 2rem;
-   }
-
    @include adaptiv-font(18, 12);
    color: $black;
    line-height: 1.8;
+
+   &--gray-bg {
+      padding: 2.25em 1.875em;
+
+      font-weight: 500;
+      color: #5F6C72;
+
+      background-color: #F0F6F9;
+   }
+   &:not(:last-child) {
+      margin-bottom: 2rem;
+   }
+}
+.article__list {
+
 }

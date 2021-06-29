@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="theme-color" content="#111111">
+   <title>Industrial</title>
+   <link rel="stylesheet" href="css/vendor.css">
+   <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+   <div class="site-container  site-container--bg-gray">
+      @include('partials/sprite.html')
+
+      <header class="header  header--relative">
+         @include('partials/header.html')
+      </header>
+
+      <div class="breadcrumb">
+         <div class="container">
+            <ul class="breadcrumb__list">
+               <li class="breadcrumb__item">
+                  <a class="breadcrumb__item-link" href="index.html">Главная</a>
+               </li>
+               <li class="breadcrumb__item">
+                  <a class="breadcrumb__item-link" href="objects.html">Наши объекты</a>
+               </li>
+               <li class="breadcrumb__item">
+                  <a class="breadcrumb__item-link" href="objects-article.html">Котельная 1</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+
+      <section class="intro  intro--sm">
+         <img class="intro__img" src="img/bg.jpg" alt="">
+      </section>
+
+
+
+      <!-- news -->
+      <section class="news  news--article">
+         <div class="container">
+            <article class="article  article--news">
+               <header class="article__header">
+                  <div class="article__header-box">
+                     <h2 class="article__header-title">Проектирование, монтаж и сервисное обслуживание систем
+                        отопления
+                        и теплоснабжения</h2>
+                  </div>
+               </header>
+
+
+               <div class="article__body">
+                  <p class="article__text">Наша команда профессионалов эффективно решит задачи по проектированию
+                     инженерных систем отопленияи теплоснабжения любого вида сложности. Мы занимаемся монтажом систем
+                     отопления, а также сервисным обслуживанием, ремонтом или реконструкцией этих систем. Принцип
+                     нашей работы — системы отопление «под ключ»! Компания Термал предлагает только качественное
+                     отопительное и котельное оборудование лучших фирм в этом сегменте. Таблица стоимость тепла
+                     из разных источников Сравнительный расчёт стоимости отопления при использовании разных
+                     источников.</p>
+
+                  <table class="article__table">
+                     <tr class="article__table-item">
+                        <th class="article__table-title"></th>
+                        <th class="article__table-title">Стоимость ресурса</th>
+                        <th class="article__table-title">Цена тепловой энергии</th>
+                     </tr>
+                     <tr class="article__table-item">
+                        <td class="article__table-cell"><span>Электроэнергия</span></td>
+                        <td class="article__table-cell">1,68 грн за 1кВт*час</td>
+                        <td class="article__table-cell">1,68</td>
+                     </tr>
+                     <tr class="article__table-item">
+                        <td class="article__table-cell"><span>Природный газ</span></td>
+                        <td class="article__table-cell">11340 грн за 1000 нм3 </td>
+                        <td class="article__table-cell">1,40</td>
+                     </tr>
+                     <tr class="article__table-item">
+                        <td class="article__table-cell"><span>Центральное теплоснабжение</span></td>
+                        <td class="article__table-cell">1108 грн за 1 Гкал</td>
+                        <td class="article__table-cell">0,95</td>
+                     </tr>
+                  </table>
+
+                  <h3 class="article__title">Тепловые насосы для отопления – источник самого дешевого тепла</h3>
+
+                  <p class="article__text  article__text--gray-bg">Окупаемость замены существующей системы на
+                     тепловой насос может составлять от 1 до 4 лет.
+                  </p>
+
+
+                  <p class="article__text">Для уменьшения затрат на производство тепла предлагается использовать
+                     воздушные тепловые насосы для отопления типа воздух-воздух.
+                  </p>
+
+                  <p class="article__text">Тепловые насосы типа воздух-воздух гарантировано работают до наружных
+                     температур — 25С и ниже. Среднегодичный коэффициент преобразования электрической энергии
+                     в тепловую выше 5. При — 20С этот коэффициент преобразования равен 3.
+                  </p>
+
+                  <p class="article__text">Подбор оборудования на отопление происходит именно при коэффициенте 3.
+                     При стоимости электроэнергии 1,68 грн за 1 кВт*час в годичном разрезе стоимость 1кВт*час тепла
+                     составляет 0,34 грн. Для сравнения при стоимости природного газа 11340 грн за 1000 м3, стоимость
+                     1 кВт*час тепла с газовой котельне составляет 1,40 грн. Т.е. установка систем отопления
+                     с тепловыми насосами почти в 4 раза экономичней.</p>
+
+                  <div class="article__slider  swiper-container">
+                     <div class="article__slider-wrapper  swiper-wrapper">
+                        <div class="article__slider-slide  swiper-slide">
+                           <img class="article__slider-img" src="img/news-slider_1.jpg" alt="">
+                        </div>
+                        <div class="article__slider-slide  swiper-slide">
+                           <img class="article__slider-img" src="img/bg.jpg" alt="">
+                        </div>
+                     </div>
+
+                     <div
+                        class="article__slider-btn  article__slider-btn--prev  slider__btn  slider__btn--square  slider__btn--prev swiper-button-prev">
+                        <svg class="slider__btn-icon">
+                           <use href='#arrow'></use>
+                        </svg>
+                     </div>
+
+                     <div class="article__slider-btn  slider__btn  slider__btn--square  swiper-button-next">
+                        <svg class="slider__btn-icon">
+                           <use href='#arrow'></use>
+                        </svg>
+                     </div>
+                  </div>
+
+                  <h3 class="article__title">Преимущества системы с использованием насоса для отопления:</h3>
+
+                  <ol>
+                     <li>Нет потребности в строительстве котельной, газопровода, теплопункта и разводки теплоносителя
+                        внутри помещения.</li>
+                     <li>Не увеличивается электрическая установленная мощность. Достаточно электрической мощности
+                        запроектированной на систему кондиционирования.</li>
+                     <li>Низкие эксплуатационные затраты. В среднем в 3–4 раза отопление дешевле чем при отоплении
+                        котельной при существующих ценах на энергоносители.</li>
+                     <li>Нет увеличения капитальных затрат по сравнению с классической системой. Если разница
+                        и возникает, то она себя быстро окупает.</li>
+                     <li>Из за отсутствия воды, исчезает вероятность обмораживания калориферов.</li>
+                     <li>Предусмотрена система дублирования тепловой мощности.</li>
+                  </ol>
+
+                  <h3 class="article__title">Помещения, применение в которых лучистых панелей имеет максимальный
+                     эффект:</h3>
+
+                  <ul>
+                     <li>склады, супермаркеты</li>
+                     <li>спорткомплексы, крытые стадионы</li>
+                     <li>выставочные залы, церкви</li>
+                     <li>все производственные предприятия, цеха</li>
+                     <li>другие помещения большой высоты (4 метра и более)</li>
+                  </ul>
+
+                  <h3 class="article__title">Воздушные теплогенераторы, воздухонагреватели</h3>
+
+                  <h5>Топливо:</h5>
+                  <ul>
+                     <li>природный газ</li>
+                     <li>сжиженный газ</li>
+                     <li>дизельное топливо</li>
+                     <li>отработанное моторное масло</li>
+                     <li>твёрдое топливе (пелеты или щипа)</li>
+                  </ul>
+
+                  <h5>А также:</h5>
+                  <div class="pricing__item  pricing__item--gray-bg">
+                     <div class="pricing__item-type">
+                        <img src="img/pdf.svg" alt="">
+                     </div>
+
+                     <h5 class="pricing__item-title">Название файла.pdf</h5>
+
+                     <button class="pricing__item-btn">
+                        <img src="img/download.svg" alt=""><span>Скачать</span>
+                     </button>
+                  </div>
+
+               </div>
+
+            </article>
+         </div>
+      </section>
+
+
+
+      @include('partials/footer.html')
+      @include('partials/footer.html')
+   </div>
+
+
+   <script src="js/vendor.js"></script>
+   <script src="js/main.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+
+</html>
