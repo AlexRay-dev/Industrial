@@ -1,10 +1,30 @@
 "use strict"
 
 
+/* Burger */
+
+const iconMenu = document.querySelector('.menu__burger');
+if (iconMenu) {
+   const menuBody = document.querySelector('.menu__body');
+   iconMenu.addEventListener('click', function () {
+      document.body.classList.toggle('_lock');
+      iconMenu.classList.toggle('_open');
+      menuBody.classList.toggle('_open');
+   });
+};
+
+let menuArrows = document.querySelectorAll('.menu__link');
+if (menuArrows.length > 0) {
+   for (let index = 0; index < menuArrows.length; index++) {
+      const menuArrow = menuArrows[index];
+      menuArrow.addEventListener("click", function (e) {
+         menuArrow.parentElement.classList.toggle('_active');
+      });
+   };
+};
 
 
-
-/* Прокрутка при клике */
+/* scroll (in Intro block)*/
 
 const menuLinks = document.querySelectorAll(".intro__menu-link[data-goto]");
 
@@ -29,29 +49,8 @@ if (menuLinks.length > 0) {
 };
 
 
+/* Swiper sliders */
 
-/* Burger */
-const menuBtn = document.querySelector('.burger');
-const menuMobile = document.querySelector('.menu__body');
-let menuOpen = false;
-
-menuBtn.addEventListener('click', function () {
-   if (!menuOpen) {
-      menuBtn.classList.add('burger--open');
-      menuMobile.classList.add('menu__body--open');
-      menuOpen = true;
-   } else {
-      menuBtn.classList.remove('burger--open');
-      menuMobile.classList.remove('menu__body--open');
-      menuOpen = false;
-   }
-})
-/* Burger */
-
-
-
-
-/* intro__slider */
 new Swiper('.intro__slider', {
    navigation: {
       nextEl: '.intro__slider-btn--next',
@@ -88,7 +87,6 @@ new Swiper('.slider-fluid__container', {
    autoHeight: true,
 });
 
-
 let partnersSlider = new Swiper('.partners-slider__container', {
    navigation: {
       nextEl: '.partners-slider__btn-next',
@@ -99,7 +97,6 @@ let partnersSlider = new Swiper('.partners-slider__container', {
       onlyInViewport: true,
    },
    spaceBetween: 10,
-   // centeredSlides: true,
    loop: true,
    scrollbar: {
       el: '.swiper-scrollbar',
@@ -150,8 +147,7 @@ new Swiper('.slider-fluid__container', {
    autoHeight: true,
 });
 
-
-let servicesSlider = new Swiper('.services-slider__container', {
+new Swiper('.services-slider__container', {
    navigation: {
       nextEl: '.services-slider__btn-next',
       prevEl: '.services-slider__btn-prev',
@@ -160,7 +156,6 @@ let servicesSlider = new Swiper('.services-slider__container', {
       enabled: true,
       onlyInViewport: true,
    },
-   slidesPerView: 1.5,
    centeredSlides: true,
    spaceBetween: 10,
    loop: true,
@@ -174,7 +169,8 @@ let servicesSlider = new Swiper('.services-slider__container', {
       },
    }
 });
-let articleSlider = new Swiper('.article__slider', {
+
+new Swiper('.article__slider', {
    navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -188,76 +184,49 @@ let articleSlider = new Swiper('.article__slider', {
 });
 
 
-
-
-/* Example-tabs */
-const tabsExampleBtn = document.querySelectorAll(".map__item");
-const tabsExampleItem = document.querySelectorAll(".map__tabs-item");
-
-tabsExampleBtn.forEach(onTabBtnClick)
-
-function onTabBtnClick(item) {
-   item.addEventListener('mouseover', function () {
-      let currentBtn = item;
-      let tabId = currentBtn.getAttribute("data-tab");
-      let currentTab = document.querySelector(tabId)
-
-
-      currentBtn.classList.add("map__item--active");
-      currentTab.classList.add("map__tabs-item--active")
-   });
-   item.addEventListener('mouseout', function () {
-      let currentBtn = item;
-      let tabId = currentBtn.getAttribute("data-tab");
-      let currentTab = document.querySelector(tabId)
-
-
-      currentBtn.classList.remove("map__item--active");
-      currentTab.classList.remove("map__tabs-item--active")
-   });
-};
-/* Example-tabs */
-
-
+/* simpleParallax */
 var image = document.getElementsByClassName('objects__img');
 new simpleParallax(image, {
-	scale: 1.3,
+   scale: 1.3,
    delay: .3,
-	transition: 'cubic-bezier(0,0,0,1)'
+   transition: 'cubic-bezier(0,0,0,1)'
+});
+var image = document.getElementsByClassName('intro__img');
+new simpleParallax(image, {
+   scale: 1.3,
+   delay: .3,
+   transition: 'cubic-bezier(0,0,0,1)'
 });
 
 
-
+/* numbers animation */
 const time = 2500;
 const step = 1;
 
 function outNum110(num, elem) {
-  let e = document.querySelector("#numbers_110");
-  let n = 0;
-  let t = Math.round(time / (num / step));
-  let interval = setInterval(() => {
-    n = n + step;
-    if (n == num) {
-      clearInterval(interval);
-    }
-    e.innerHTML = n;
-  }, t);
+   let e = document.querySelector("#numbers_110");
+   let n = 0;
+   let t = Math.round(time / (num / step));
+   let interval = setInterval(() => {
+      n = n + step;
+      if (n == num) {
+         clearInterval(interval);
+      }
+      e.innerHTML = n;
+   }, t);
 }
 function outNum25(num, elem) {
-  let e = document.querySelector("#numbers_25");
-  let n = 0;
-  let t = Math.round(time / (num / step));
-  let interval = setInterval(() => {
-    n = n + step;
-    if (n == num) {
-      clearInterval(interval);
-    }
-    e.innerHTML = n;
-  }, t);
+   let e = document.querySelector("#numbers_25");
+   let n = 0;
+   let t = Math.round(time / (num / step));
+   let interval = setInterval(() => {
+      n = n + step;
+      if (n == num) {
+         clearInterval(interval);
+      }
+      e.innerHTML = n;
+   }, t);
 }
 
 outNum110(110, "#numbers_110");
 outNum25(25, "#numbers_25");
-
-
-

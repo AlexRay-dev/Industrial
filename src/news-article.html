@@ -16,7 +16,7 @@
    <div class="site-container  site-container--bg-gray">
       @include('partials/sprite.html')
 
-      <header class="header  header--relative">
+      <header class="header">
          @include('partials/header.html')
       </header>
 
@@ -27,17 +27,17 @@
                   <a class="breadcrumb__item-link" href="index.html">Главная</a>
                </li>
                <li class="breadcrumb__item">
-                  <a class="breadcrumb__item-link" href="objects.html">Наши объекты</a>
+                  <a class="breadcrumb__item-link" href="objects.html">Новости</a>
                </li>
                <li class="breadcrumb__item">
-                  <a class="breadcrumb__item-link" href="objects-article.html">Котельная 1</a>
+                  <a class="breadcrumb__item-link" href="objects-article.html">Проектирование, монтаж и сервисное обслуживание систем отопления и теплоснабжения</a>
                </li>
             </ul>
          </div>
       </div>
 
-      <section class="intro  intro--sm">
-         <img class="intro__img" src="img/bg.jpg" alt="">
+      <section class="intro  intro--sm  intro--relative">
+         <img class="intro__img  intro__img--gradient" src="img/news-bg_1.jpg" alt="">
       </section>
 
 
@@ -189,16 +189,12 @@
          </div>
       </section>
 
-
-
-      @include('partials/footer.html')
       @include('partials/footer.html')
    </div>
 
 
    <script src="js/vendor.js"></script>
    <script src="js/main.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 
 </html>
